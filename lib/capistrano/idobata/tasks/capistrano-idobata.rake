@@ -47,9 +47,3 @@ namespace :idobata do
     end
   end
 end
-
-before 'idobata:starting', 'idobata:setup'
-
-after 'deploy:starting', 'idobata:starting'
-after 'deploy:finished', 'idobata:finished'
-after 'deploy:failed',   'idobata:failed'
