@@ -13,7 +13,7 @@ module Capistrano
         !! @hook_url
       end
 
-      def send(message)
+      def post(message)
         RestClient.post @hook_url, source: message
       end
     end

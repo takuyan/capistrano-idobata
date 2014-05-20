@@ -18,7 +18,7 @@ namespace :idobata do
         "deploy #{@deploy_infomation.application}' to #{@deploy_infomation.stage} start !! :rocket:"
       end
 
-      @idobata_client.send(message)
+      @idobata_client.post(message)
     end
   end
 
@@ -30,7 +30,7 @@ namespace :idobata do
         ":white_check_mark: deploy #{@deploy_infomation.application}' to #{@deploy_infomation.stage} success !!"
       end
 
-      @idobata_client.send(message)
+      @idobata_client.post(message)
     end
   end
 
@@ -43,7 +43,7 @@ namespace :idobata do
         ":broken_heart: deploy #{@deploy_infomation.application}' to #{@deploy_infomation.stage} failed !!"
       end
 
-      @idobata_client.send(message)
+      @idobata_client.post(message)
     end
   end
 end
